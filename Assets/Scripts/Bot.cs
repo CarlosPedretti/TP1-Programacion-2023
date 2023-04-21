@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Bot : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Bot : MonoBehaviour
     string nombreJugador;
     string nombreActual;
     public string nuevoNombre = "Bot";
+    public TMP_Text Name;
 
 
     void Start()
@@ -21,6 +23,8 @@ public class Bot : MonoBehaviour
     {
         //Hacemos un Set para modificar el nombre actual del jugador
         nombreJugador = playerScript.GetComponent<Player>().Nombre = nuevoNombre;
+        Name.text = nombreActual;
+
         Debug.Log("Hola" + nombreActual + "Ahora te llamas :" + nuevoNombre);
     }
 

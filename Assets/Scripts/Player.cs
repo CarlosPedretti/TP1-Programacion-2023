@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     private string nombre = "Pedro";
 
 
+
+
     public string Nombre
     {
         get { return nombre; }
